@@ -71,13 +71,15 @@ We have received your details successfully ✅
 
 ## 📁 Project Structure
 
+```
 whatsapp-automation-n8n/
 │
 ├── README.md
 ├── workflow.json
 └── images/
-├── workflow.png
-└── whatsapp.png
+    ├── workflow.png
+    └── whatsapp.png
+```
 
 ---
 
