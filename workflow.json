@@ -1,0 +1,96 @@
+{
+  "name": "workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "1fq-1ZKukb8c_Z3_v16rD25kB5fgvbmaMRsSqhdtXFH4",
+          "mode": "list",
+          "cachedResultName": "Untitled form (Responses)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1fq-1ZKukb8c_Z3_v16rD25kB5fgvbmaMRsSqhdtXFH4/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1832818238,
+          "mode": "list",
+          "cachedResultName": "Form Responses 1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1fq-1ZKukb8c_Z3_v16rD25kB5fgvbmaMRsSqhdtXFH4/edit#gid=1832818238"
+        },
+        "event": "rowAdded",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "ab612bb4-43cf-4a73-8c57-dc897ac85a4a",
+      "name": "Google Sheets Trigger",
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "uifqqgs4zcjq99rY",
+          "name": "Google Sheets Trigger OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "from": "whatsapp:+14155238886",
+        "to": "={{\"whatsapp:+91\" + $json[\"Phone Number\"]}}",
+        "message": "=👋 Hi {{$json[\"Name\"]}},\n\n🎉 Thank you for registering!\n\nWe have received your details successfully ✅",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.twilio",
+      "typeVersion": 1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "05dc1c6c-d7c1-40e9-91bb-decf207e0c31",
+      "name": "Send an SMS/MMS/WhatsApp message",
+      "credentials": {
+        "twilioApi": {
+          "id": "hDtueRBrv1XkkFDQ",
+          "name": "Twilio account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Google Sheets Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send an SMS/MMS/WhatsApp message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "6b4f870f-4f2c-44ea-973d-960f32d85d3c",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "b897081170e035a4f5a3b9cfc721de045a8eccc5ad1e7767e54d6a8f63caecff"
+  },
+  "nodeGroups": [],
+  "id": "yCCoarnDUuaX8dMf",
+  "tags": []
+}
