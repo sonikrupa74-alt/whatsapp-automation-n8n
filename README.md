@@ -4,7 +4,7 @@
 
 This project automates sending WhatsApp confirmation messages when a user submits a Google Form.
 
-It demonstrates real-time workflow automation using APIs and integrations without heavy coding.
+It showcases real-time workflow automation using APIs and integrations without heavy coding.
 
 ---
 
@@ -29,7 +29,7 @@ It demonstrates real-time workflow automation using APIs and integrations withou
 ## 💡 Features
 
 * ✅ Real-time WhatsApp confirmation
-* ✅ Fully automated workflow (no manual steps)
+* ✅ Fully automated workflow (no manual steps after setup)
 * ✅ Dynamic message using user input
 * ✅ Supports multiple users
 * ✅ Simple and scalable design
